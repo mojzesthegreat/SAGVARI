@@ -1,17 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <h1>Jó zenék:</h1>
-    <p>
-    <li>Epic Rap Battles of History<br>
-        <img src="erb.jpg"><br>
-    <li>Earth Wind and Fire<br>  
-        <img src="ewf.jpg"><br>
-    <li>Kommunista dalok<br>
-        <img src="fvp.jpg"><br>
-    <li>Nacionalista dalok<br>
-        <img src="md.jpg"><br>
-    <li>Ragtime<br>    
-        <img src="te.jpg">
-
-</p>
-            
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.c {
+            display: flex;
+            flex-flow: wrap;
+            justify-content: center;
+        }
+        .d {
+            display: inline-block;
+            width: 280px;
+            height: 100px;
+            background-color: rgb(135, 206, 206);
+            align-self: center;
+            border: solid 1px red;
+            box-shadow: 1px 1px 4px black;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 6px;
+        }
+        h1 {
+            text-align: center;
+        }
+    </style>
 </head>
+<body>
+    <h1>Cím</h1>
+    <div class="c">
+        <img src="erb.jpg" alt="h" class="d">
+        <img src="ewf.jpg" alt="h" class="d">
+        <img src="fvp.jpg" alt="h" class="d">
+        <img src="md.jpg" alt="g" class="d">
+        <img src="te.jpg" alt="g" class="d">
+    </div>
+</body>
+</html>
