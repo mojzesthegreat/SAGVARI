@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="v" onclick="f()">Oda</div>
+    <div class="v" onclick="g()">Vissza</div>
+    <hr>
+    <div class="t" id="t1">Első tartalom</div>
+    <div class="t" id="t2">Második tartalom</div>
+</body>
+<style>
+    div {
+        display: inline-block;
+        box-shadow: 1px 1px 4px black;
+        border-radius: 5px;
+        padding: 10px;
+    }
+    div.t {
+        background-color: aquamarine;
+    }
+    div.v {
+        background-color: rgb(146, 142, 105);
+        cursor: pointer;
+    }
+    div.v:hover {
+        background-color: aqua;
+    }
+    #t2 {
+        position: fixed;
+        top: -50px;
+        left: 10px;
+    }
+</style>
+<script>
+    x = 0
+    function f() {
+        x = -50
+        anim = setInterval(()=>{
+            document.getElementById("t2").style.top=`${ x }px`
+            x+=1
+            if (x>59) clearInterval(anim)
+        }, 10)
+    }
+    function g() {
+        x = 60
+        anim = setInterval(()=>{
+            document.getElementById("t2").style.top=`${ x }px`
+            x-=1
+            if (x<-49) clearInterval(anim)
+        }, 10)
+    }
+</script>
+</html>
