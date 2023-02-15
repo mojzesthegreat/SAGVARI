@@ -1,0 +1,16 @@
+<input type="number" onchange="a=Number(this.value)">
+<input type="number" onchange="b=Number(this.value)">
+<button onclick="f()">Számol</button>
+<div id="x"></div>
+<script>
+    a = 0
+    b = 0
+    function f() {
+        for (x=-100;x<100;x++) for (y=-100;y<100;y++) {
+            z = Math.sqrt( a * x ** 2 + b * y ** 2 )
+            if (z == Math.round(z))
+                document.getElementById("x").innerHTML = x + " " + y + " " + z
+        }
+        
+    }
+</script>
